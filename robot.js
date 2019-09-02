@@ -1,4 +1,4 @@
-var countryToSearch = '15'; //21 => Cuba, 15 => Canada
+var countryToSearch = '21'; //21 => Cuba, 15 => Canada
 
 var casper = require('casper').create({
     pageSettings: {
