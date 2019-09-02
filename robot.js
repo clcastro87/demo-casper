@@ -1,4 +1,4 @@
-var countryToSearch = '21'; //21 => Cuba, 15 => Canada
+var countryToSearch = '15'; //21 => Cuba, 15 => Canada
 
 var casper = require('casper').create({
     pageSettings: {
@@ -10,7 +10,7 @@ var casper = require('casper').create({
     }
 });
 
-casper.start('https://www.mydemo.org/', function() {
+casper.start('https://ielts.britishcouncil.org/', function() {
     this.echo(this.getTitle());
     this.waitForSelector('form[name="aspnetForm"]');
     this.waitForSelector('#ctl00_ContentPlaceHolder1_imgbRegisterBtn');
