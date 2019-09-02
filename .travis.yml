@@ -1,6 +1,12 @@
 language: node_js
 node_js:
           - node
+# Download the right version of phantomjs 2.0.0, and place it before everything else in our $PATH
+before_install:
+  - mkdir travis-phantomjs
+  - wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 -O $PWD/travis-phantomjs/phantomjs.tar.bz2
+  - tar -xvf $PWD/travis-phantomjs/phantomjs.tar.bz2 -C $PWD/travis-phantomjs
+  - export PATH=$PWD/travis-phantomjs:$PATH
 before_script:
           - npm start &
           - sleep 5
