@@ -11,7 +11,7 @@ var casper = require('casper').create({
 });
 
 casper.start('https://ielts.britishcouncil.org/', function() {
-    this.echo(this.getTitle());
+    //this.echo(this.getTitle());
     this.waitForSelector('form[name="aspnetForm"]');
     this.waitForSelector('#ctl00_ContentPlaceHolder1_imgbRegisterBtn');
 });
@@ -26,7 +26,7 @@ casper.then(function() {
  });
 
 casper.then(function() {
-    this.echo('Submit OK, new location is ' + this.getCurrentUrl());
+    this.echo('Submit OK, new location is other form');
 });
 
 casper.waitForUrl(/CountryExamSearch\.aspx$/, function() {
