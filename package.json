@@ -9,9 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-	"preinstall": "npm i -g http-server casperjs",
-	"start": "http-server",
-	"test": "echo 0"
+    "preinstall": "npm i -g http-server casperjs",
+    "start": "http-server",
+    "test": "echo 0"
   },
   "author": "",
   "license": "ISC"
